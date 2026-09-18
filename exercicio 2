@@ -1,0 +1,355 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOSB1M+6ZnTmzKAkxbQArFe",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/guisouza565656-commits/aulas-de-prograamador-de-sistemas-senac/blob/main/exercicio%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# listas com python"
+      ],
+      "metadata": {
+        "id": "JF6M_rKkSMZj"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# criando listas"
+      ],
+      "metadata": {
+        "id": "ezZkKSuYSm0H"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frutas = [\"maça\", \"banana\", \"laranja\"]\n",
+        "letras = list(\"python\")\n",
+        "numeros = list(range(1))\n",
+        "carro = [\"Ferrari\", \"F8\", 4200000, 2020, 2900, \"São Paulo\", True]\n",
+        "print(frutas)\n",
+        "print(letras)\n",
+        "print(numeros)\n",
+        "print(carro)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sffiXfl4V4bZ",
+        "outputId": "a05d4c34-0954-4404-c647-91c8f453228f"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['maça', 'banana', 'laranja']\n",
+            "['p', 'y', 't', 'h', 'o', 'n']\n",
+            "[0]\n",
+            "['Ferrari', 'F8', 4200000, 2020, 2900, 'São Paulo', True]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# listas aninhadas"
+      ],
+      "metadata": {
+        "id": "HgIIdtS9XMgh"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "matriz = [\n",
+        "    [1, \"a\", 2],\n",
+        "    [\"b\", 3, 4],\n",
+        "    [6, 5, \"c\"]\n",
+        "]\n",
+        "matriz[0]      # [1, \"a\", 2]\n",
+        "matriz[0][0]   # 1\n",
+        "matriz[0][-1]  # 2\n",
+        "matriz[-1][-1] # \"c\""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "nuUo79jTVqh3",
+        "outputId": "5677b03f-f366-45ee-cf07-34883d2a8082"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'c'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# fatiamento"
+      ],
+      "metadata": {
+        "id": "sYPCq5ZEXnno"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista = [\"p\", \"y\", \"t\", \"h\", \"o\", \"n\"]\n",
+        "lista[2:]    # [\"t\", \"h\", \"o\", \"n\"]\n",
+        "lista[:2]    # [\"p\", \"y\"]\n",
+        "lista[1:3]   # [\"y\", \"t\"]\n",
+        "lista[0:3:2] # [\"p\", \"t\"]\n",
+        "lista[::]    # [\"p\", \"y\", \"t\", \"h\", \"o\", \"n\"]\n",
+        "lista[::-1]  # [\"n\", \"o\", \"h\", \"t\", \"y\", \"p\"]"
+      ],
+      "metadata": {
+        "id": "vQ7N_vQNXswj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#iterar listas"
+      ],
+      "metadata": {
+        "id": "Od1umj4_XvaE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "carros = [\"gol\", \"celta\", \"palio\"]\n",
+        "for carro in carros:\n",
+        "    print(carro)"
+      ],
+      "metadata": {
+        "id": "whekZz9iX1L3"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# petição"
+      ],
+      "metadata": {
+        "id": "D9e50wp1YP-Z"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for frutas in frutas:\n",
+        "    print(f\"Eu gosto de {frutas}\")\n",
+        "frutas, sorted"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PTaYwElUaOhL",
+        "outputId": "647e4ad6-076f-4ab3-e4e9-fcf78b8a480d"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Eu gosto de maça\n",
+            "Eu gosto de banana\n",
+            "Eu gosto de laranja\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "('laranja', <function sorted(iterable, /, *, key=None, reverse=False)>)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 12
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# exercicios 2\n",
+        "1 Crie um programa que receba uma lista de números e retorne o maior valor dessa lista."
+      ],
+      "metadata": {
+        "id": "NEzcqx3EfRF6"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. crie uma lista com varios numeros\n",
+        "2. analise a lista e separe\n",
+        "3. percorrer a lista em loop\n",
+        "4. informe qual o maior numero"
+      ],
+      "metadata": {
+        "id": "m1Xat3sKlvAw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "minha_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "maior_numero = minha_lista[1]\n",
+        "for numero in minha_lista:\n",
+        "    if numero > maior_numero:\n",
+        "        maior_numero = numero\n",
+        "print(maior_numero)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PSbhYT6Kmm_V",
+        "outputId": "eed6d50c-7501-478e-ef5f-a5476f181fe5"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2 Crie um programa que receba uma lista de números e retorne a soma de todos os valores.\n",
+        "\n",
+        "1. analise a lista recebida\n",
+        "2. faça a separação de cada numero\n",
+        "3. analise quantos numeros possuem na lista\n",
+        "4. faça a soma de todos os numeros\n",
+        "5. infome o resultado"
+      ],
+      "metadata": {
+        "id": "OY-62fUHfmKZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_de_numeros = []\n",
+        "soma = 0\n",
+        "repetir = True\n",
+        "while repetir :\n",
+        "  numero = int(input('Entre com um número'))\n",
+        "  lista_de_numeros.append(numero)\n",
+        "  soma = soma + numero\n",
+        "  continuar = input('Deseja Continuar?[s/n]')\n",
+        "  if continuar == 'n':\n",
+        "      repetir = False\n",
+        "print(lista_de_numeros)\n",
+        "print(f'A soma é soma{soma}')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nWkhO7ZHfrPo",
+        "outputId": "1b7784c5-175b-4c0e-e01f-e71b80cc9c25"
+      },
+      "execution_count": 59,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Entre com um número1\n",
+            "Deseja Continuar?[S/n]n\n",
+            "[1]\n",
+            "A soma é soma1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3Crie um programa que receba duas listas e retorne uma terceira lista com a interseção dos elementos das duas listas.\n",
+        "# algoritimo\n",
+        "\n",
+        "1. receber uma lista\n",
+        "2. receber outra lista\n",
+        "3. receber outra lista\n",
+        "4. percorrer a primeira lista e comparar os elementos com os elementos daoutra lista e salvar os elementos repetidos em uma terceira lista\n",
+        "5. mostrar a terceira lista"
+      ],
+      "metadata": {
+        "id": "8MyU_3FRfsVJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "primeira_lista = []\n",
+        "segunda_lista = []\n",
+        "terceira_lista = []"
+      ],
+      "metadata": {
+        "id": "84cLhtUb3DxB"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
